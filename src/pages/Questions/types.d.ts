@@ -1,0 +1,3 @@
+interface IFormikHomeProps {
+  cepOrAddress: string;
+}

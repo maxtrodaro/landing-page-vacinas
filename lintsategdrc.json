@@ -1,0 +1,5 @@
+{
+  "*.ts": ["next lint --fix"],
+  "*.tsx": ["next lint --fix"],
+  "*.js": ["next lint --fix"]
+}

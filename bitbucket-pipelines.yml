@@ -1,0 +1,36 @@
+image: node:lts
+
+pipelines:
+  pull-requests:
+    '**':
+      - step:
+          script:
+            - >-
+              npm config set "@fortawesome:registry" https://npm.fontawesome.com/ &&
+              npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_NPM_AUTH_TOKEN
+            - yarn
+            - >-
+              NEXT_PUBLIC_SENTRY_DNS=$NEXT_PUBLIC_SENTRY_DNS
+              NEXT_PUBLIC_SENTRY_ENABLED=$NEXT_PUBLIC_SENTRY_ENABLED
+              yarn build && yarn next export
+  branches:
+    release/homolog:
+      - step:
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - apt-get update && apt-get install -y zip
+            - >-
+              npm config set "@fortawesome:registry" https://npm.fontawesome.com/ &&
+              npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_NPM_AUTH_TOKEN
+            - yarn
+            - >-
+              NEXT_PUBLIC_SENTRY_DNS=$NEXT_PUBLIC_SENTRY_DNS
+              NEXT_PUBLIC_SENTRY_ENABLED=$NEXT_PUBLIC_SENTRY_ENABLED
+              NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL_HOMOLOG
+              NEXT_PUBLIC_GA=$NEXT_PUBLIC_GA
+              NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL_HOMOLOG 
+              yarn build && yarn next export
+            - zip -r application.zip out/
+          artifacts:
+            - application.zip

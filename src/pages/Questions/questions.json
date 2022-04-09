@@ -1,0 +1,132 @@
+[
+  {
+    "sectionId": "1",
+    "question": "Quem deve tomar a vacina?",
+    "answer": "A vacina é recomendada para todos, inclusive jovens, devido a benefícios como redução das internações, da gravidade dos sintomas e do absenteísmo no trabalho.",
+    "sup": "6,8"
+  },
+  {
+    "sectionId": "1",
+    "question": "Para quem a vacina é contraindicada?",
+    "answer": "A vacina da gripe é contraindicada para: pessoas com alergia grave (como anafilaxia) a algum componente da vacina ou a doses prévias da vacina.",
+    "sup": "9"
+  },
+  {
+    "sectionId": "1",
+    "question": "Quando devo tomar a vacina?",
+    "answer": "Por se tratar de uma ação preventiva, a vacina deve ser tomada antes do início da circulação do vírus. No Brasil, o momento ideal para a vacinação é o OUTONO, pois o período para a produção dos anticorpos é de aproximadamente 2 a 3 semanas contra o vírus, que circula com maior intensidade no inverno.",
+    "sup": "10"
+  },
+  {
+    "sectionId": "1",
+    "question": "A vacina da gripe pode causar gripe?",
+    "answer": "A vacina não causa gripe. Pelo fato ser utilizado o vírus inativado na composição da vacina, não existe a possibilidade de causar o desenvolvimento da gripe.",
+    "sup": "11"
+  },
+  {
+    "sectionId": "1",
+    "question": "Estou doente e/ou com febre, posso tomar a vacina?",
+    "answer": "Assim como outras vacinas, é recomendado que a imunização seja adiada até que a febre passe ou ocorra a melhora dos sintomas, para que seu sistema imune esteja completamente recuperado a fim de se obter uma boa resposta imune contra o vírus da Influenza.",
+    "sup": "12,13"
+  },
+  {
+    "sectionId": "1",
+    "question": "Já tive gripe no ano passado, ainda assim devo tomar a vacina?",
+    "answer": "SIM! Existem diversos tipos de vírus da gripe em circulação, sendo que a infecção por um tipo do vírus Influenza não promove proteção contra os outros. Por isso, quem teve infecção confirmada por um determinado tipo do vírus Influenza em uma temporada, deve sim tomar a vacina para se proteger contra os outros subtipos circulantes na temporada atual.",
+    "sup": "12,14"
+  },
+  {
+    "sectionId": "1",
+    "question": "Me vacinei no ano passado. Ainda estou protegido para este ano?",
+    "answer": "NÃO! A circulação dos diversos tipos de vírus da gripe pode variar muito a cada ano, por isso, a composição das vacinas contra a gripe é revisada anualmente e novas vacinas são desenvolvidas todos os anos para proteger contra os vírus mais prevalentes na temporada. Desse modo, a vacina do ano passado pode não proteger dos vírus que estão circulando este ano. Além disso, os níveis de anticorpos produzidos podem cair com o tempo, por isso é importante manter a vacinação em dia.",
+    "sup": "15"
+  },
+  {
+    "sectionId": "1",
+    "question": "A vacina da gripe imuniza contra resfriado?",
+    "answer": "NÃO. Gripe e resfriado apresentam sintomas parecidos, mas são doenças diferentes transmitidas por vírus diferentes. A gripe é causada por vírus do tipo Influenza. Apresenta um início abrupto dos sintomas e provoca febre alta, dores pelo corpo, fadiga e dores de cabeça, além de causar complicações graves que exigem hospitalização e podem levar à morte. Já o resfriado é transmitido por diversos outros vírus e tem os sintomas semelhantes, porém mais leves e de menor duração, como espirros, coriza e dor de garganta.",
+    "sup": "16,17"
+  },
+  {
+    "sectionId": "1",
+    "question": "A vacina contra a gripe previne o Coronavírus?",
+    "answer": "NÃO. A vacina contra a gripe é extremamente importante para prevenção da infecção causada pelos vírus do tipo Influenza, mas não confere proteção contra qualquer tipo de Coronavírus.",
+    "sup": "11"
+  },
+  {
+    "sectionId": "1",
+    "question": "Contra quais subtipos do vírus Influenza a vacina confere proteção?",
+    "answer": "Na temporada de 2022, a vacina irá conferir proteção contra os seguintes subtipos virais:",
+    "answerList": [
+      "Vacina trivalente (oferecida pelo Programa Nacional de Imunizações do SUS): A/Victoria/H1N1; A/Darwin/H3N2; B/Austria/Linhagem Victoria.",
+      "Vacina tetravalente (oferecida em serviços privados): A/Victoria/H1N1; A/Darwin/H3N2; B/Austria/Linhagem Victoria; B/Phuket/Linhagem Yamagata."
+    ],
+    "sup": "18"
+  },
+  {
+    "sectionId": "2",
+    "question": "O que posso sentir após tomar a vacina?",
+    "answer": "Como qualquer vacina, alguns efeitos colaterais podem ocorrer. Geralmente eles são leves e normalmente desaparecem em até 2 dias. Os mais comuns são reações no local da vacina (dor, vermelhidão e/ou endurecimento), mas podem ocorrer também reações sistêmicas como febre, dores musculares e mal-estar. Vale lembrar que alguns desses eventos podem ser confundidos com os sintomas de outras infecções respiratórias virais, como a própria gripe.",
+    "sup": "9,12"
+  },
+  {
+    "sectionId": "2",
+    "question": "Quanto tempo após tomar a vacina estarei protegido contra a gripe?",
+    "answer": "A produção de anticorpos pelo nosso organismo ocorre em aproximadamente 2 a 3 semanas após a vacinação, conferindo a partir daí, uma proteção adequada. Por isso, o ideal é que a vacinação ocorra antes do vírus começar a circular.",
+    "sup": "10,12"
+  },
+  {
+    "sectionId": "2",
+    "question": "Quanto tempo ficarei protegido após a vacinação?",
+    "answer": "As atuais vacinas contra gripe apresentam uma queda da proteção a partir de 6 a 12 meses após a vacinação. Por esse motivo é importante tomar a vacina da gripe todos os anos, a fim de garantir uma proteção adequada em cada temporada de gripe.",
+    "sup": "12"
+  },
+  {
+    "sectionId": "3",
+    "question": "Gestantes podem tomar a vacina?",
+    "answer": "DEVEM! Gestantes fazem parte do grupo de risco para vacinação contra gripe por apresentarem maior risco de desenvolverem doenças graves e complicações causadas pela influenza. A vacinação pode ser realizada em qualquer idade gestacional e está disponível para esse público pelo Programa Nacional de Imunizações (PNI).",
+    "sup": "19"
+  },
+  {
+    "sectionId": "3",
+    "question": "Mulheres que estão amamentando podem tomar a vacina?",
+    "answer": "Assim como as gestantes, as puérperas também fazem parte do grupo de risco para desenvolverem influenza grave e estão incluídas no Programa Nacional de Imunizações (PNI) até 45 dias após o parto. Se a vacina não tiver sido administrada durante a gestação, ela deve ser tomada na fase da amamentação para proteção da mãe e para promover também a proteção do bebê menor de 6 meses que ainda não pode receber a vacina pela passagem de anticorpos pelo leite materno.",
+    "sup": "19,10"
+  },
+  {
+    "sectionId": "4",
+    "question": "Crianças nunca vacinadas precisam receber duas doses da vacina?",
+    "answer": "SIM. Por ocasião da primovacinação (primeira vacinação), crianças menores de nove anos devem receber duas doses com intervalo de quatro a seis semanas. Nos anos subsequentes, a dose anual deve ser única.",
+    "sup": "14"
+  },
+  {
+    "sectionId": "5",
+    "question": "Qual a diferença entre a vacina Trivalente e Tetravalente?",
+    "answer": "A vacina trivalente contém duas cepas do vírus Influenza A (uma do subtipo H1N1 e outra do subtipo H3N2) e uma cepa do vírus Influenza B (linhagem Yamagata ou Victoria). Já a vacina tetravalente contém duas cepas do vírus Influenza A (uma do subtipo H1N1 e outra do subtipo H3N2) e duas cepas do vírus Influenza B (uma cepa da linhagem Yamagata e uma cepa da linhagem Victoria). A vacina trivalente é oferecida pelo Programa Nacional de Imunizações (PNI) do SUS para o grupo de risco e a vacina tetravalente é oferecida em serviços privados para pessoas a partir de 6 meses, sem restrições de idade.",
+    "sup": "9,14"
+  },
+  {
+    "sectionId": "5",
+    "question": "Existe diferença entre os tipos de vírus Influenza?",
+    "answer": "Existem 3 tipos de vírus Influenza que infectam o ser humano: A, B e C, sendo que os dois primeiros são mais propícios a provocar epidemias sazonais e são os mais relevantes em termos de saúde pública, enquanto o último costuma provocar alguns casos mais leves. O tipo A da influenza é classificado em subtipos, como H1N1 e o H3N2. Já o tipo B é dividido em duas linhagens: Victoria e Yamagata. Existem diferenças genéticas, mas todos os tipos podem provocar sintomas parecidos.",
+    "sup": "21"
+  },
+  {
+    "sectionId": "6",
+    "question": "O que é H3N2, o novo vírus circulante no Brasil e por que tem causado um aumento nos casos de gripe?",
+    "answer": "O vírus H3N2 é um subtipo do vírus Influenza A, que é um dos principais responsáveis pela gripe comum. O aumento de casos de infecção pelo vírus Influenza no final de 2021 e começo de 2022 tem atraído atenção pelos surtos regionais ocasionados pela circulação de uma nova cepa desse subtipo viral A H3N2, batizada de Darwin.",
+    "sup": "21"
+  },
+  {
+    "sectionId": "6",
+    "question": "A vacina contra a gripe protege contra o novo vírus H3N2?",
+    "answer": "SIM! A variante do vírus Influenza A H3N2, denominada de Darwin, estará presente tanto nas vacinas trivalentes quanto nas tetravalentes e irá conferir proteção especificamente contra essa cepa.",
+    "sup": "18"
+  },
+  {
+    "sectionId": "6",
+    "question": "Quais são os sintomas causados pela H3N2?",
+    "answer": "Os sintomas são os mesmos que os causados por outros subtipos do vírus Influenza característicos de gripe, como febre alta no início do contágio, inflamação na garganta, calafrios, perda de apetite, irritação nos olhos, dores articulares, tosse e mal-estar. Lembrando que também é possível que uma pessoa tenha a doença de uma forma assintomática, sem apresentar nenhum sintoma.",
+    "sup": "21"
+  }
+]
