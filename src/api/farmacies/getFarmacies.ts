@@ -5,7 +5,11 @@ import { ISearch } from './types';
 interface IGetFarmaciesParams {
   distance: number;
   address: string;
-  isLocEnabled: string;
+  isLocEnabled: boolean;
+  userLocation: {
+    latitude: number;
+    longitude: number;
+  };
 }
 
 interface IGetFarmaciesReturn {
@@ -15,19 +19,16 @@ interface IGetFarmaciesReturn {
 }
 
 const getFarmacies = async (params: IGetFarmaciesParams): Promise<IGetFarmaciesReturn> => {
-  const { distance, address } = params;
+  const { distance, address, isLocEnabled } = params;
 
-  const userLocation =
-    localStorage.getItem('locEnabled') === 'true'
-      ? JSON.parse(localStorage.getItem('userLocation') || '')
-      : null;
+  const userLocation = isLocEnabled ? params.userLocation : null;
 
   const response = await api.post('/vacinacao/postos', {
     lat: userLocation?.latitude ?? 0,
     long: userLocation?.longitude ?? 0,
     distance,
     address,
-    type: localStorage.getItem('locEnabled') === 'true' ? 'geo' : 'cep',
+    type: isLocEnabled ? 'geo' : 'cep',
     user: {
       uid: localStorage.getItem('userId'),
       source: localStorage.getItem('userSource') || 'direct',

@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import { useToast } from '@chakra-ui/react';
 import useSWR from 'swr';
 
+import { useLocation } from 'hooks/useLocation';
+
 import getFarmacies from 'api/farmacies/getFarmacies';
 import trackClick from 'api/farmacies/trackClick';
 
@@ -22,19 +24,16 @@ interface IUseController {
 const useController = (): IUseController => {
   const router = useRouter();
   const toast = useToast();
-
-  const distance = Number(localStorage.getItem('distance'));
-  const personalLocInfo = localStorage.getItem('info');
-  const isLocEnabled = JSON.parse(localStorage.getItem('locEnabled') || 'false');
-  const userLocation = JSON.parse(localStorage.getItem('userLocation') || '{}');
+  const { useLocationConfig } = useLocation();
 
   const { data, error } = useSWR(
-    `/vacinacao/postos/${personalLocInfo}/${isLocEnabled}/${distance}/${userLocation}`,
+    `/vacinacao/postos/${useLocationConfig.personalLocInfo}/${useLocationConfig.isLocEnabled}/${useLocationConfig.distance}/${useLocationConfig.userLocation}`,
     () =>
       getFarmacies({
-        distance,
-        address: personalLocInfo || '',
-        isLocEnabled,
+        distance: useLocationConfig.distance || 0,
+        address: useLocationConfig.personalLocInfo || '',
+        isLocEnabled: useLocationConfig.isLocEnabled || false,
+        userLocation: useLocationConfig.userLocation || { latitude: 0, longitude: 0 },
       })
   );
 

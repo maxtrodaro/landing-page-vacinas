@@ -6,6 +6,8 @@ import { useToast } from '@chakra-ui/react';
 import axios from 'axios';
 import { FormikHelpers } from 'formik';
 
+import { useLocation } from 'hooks/useLocation';
+
 export interface SearchFormValues {
   cepOrAddress: string;
   isCurrentLocEnable: boolean;
@@ -18,6 +20,7 @@ interface IUseController {
 
 const useController = (): IUseController => {
   const toast = useToast();
+  const { handleUserLocationConfig } = useLocation();
 
   const router = useRouter();
 
@@ -44,12 +47,10 @@ const useController = (): IUseController => {
           return;
         }
       }
-
-      localStorage.setItem('distance', String(values.sliderValue));
-      localStorage.setItem('locEnabled', String(values.isCurrentLocEnable));
+      handleUserLocationConfig({ distance: 0, isLocEnabled: values.isCurrentLocEnable });
 
       if (!values.isCurrentLocEnable) {
-        localStorage.setItem('info', values.cepOrAddress);
+        handleUserLocationConfig({ personalLocInfo: values.cepOrAddress });
 
         router.push('/mapa');
         return;
@@ -57,13 +58,12 @@ const useController = (): IUseController => {
 
       navigator.geolocation.getCurrentPosition(
         (pos) => {
-          localStorage.setItem(
-            'userLocation',
-            JSON.stringify({
+          handleUserLocationConfig({
+            userLocation: {
               latitude: pos.coords.latitude,
               longitude: pos.coords.longitude,
-            })
-          );
+            },
+          });
 
           router.push('/mapa');
         },
@@ -78,7 +78,7 @@ const useController = (): IUseController => {
         }
       );
     },
-    [checkIfCEPIsValid, router, toast]
+    [checkIfCEPIsValid, router, toast, handleUserLocationConfig]
   );
 
   return {

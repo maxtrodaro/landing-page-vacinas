@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 
 import { useRouter } from 'next/router';
 
@@ -12,6 +12,8 @@ import {
 } from '@chakra-ui/react';
 import { faChevronLeft } from '@fortawesome/pro-light-svg-icons';
 import GoogleMapReact from 'google-map-react';
+
+import { useLocation } from 'hooks/useLocation';
 
 import Button from 'components/atom/Form/Button';
 import InfoWindow from 'components/atom/InfoWindow';
@@ -27,6 +29,19 @@ import useController from './useController';
 
 const Map: React.FC = () => {
   const router = useRouter();
+  const { useLocationConfig } = useLocation();
+
+  useLayoutEffect(() => {
+    if (
+      useLocationConfig.distance === 0 ||
+      useLocationConfig.personalLocInfo === '' ||
+      useLocationConfig.isLocEnabled === false ||
+      (useLocationConfig.userLocation?.latitude === 0 &&
+        useLocationConfig.userLocation?.longitude === 0)
+    ) {
+      router.replace('/');
+    }
+  }, [useLocationConfig, router]);
 
   const [openPlaceCode, setOpenPlaceCode] = useState<string>('');
 

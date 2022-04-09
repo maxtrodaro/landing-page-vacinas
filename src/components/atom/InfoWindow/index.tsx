@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { faLocationDot, faPhone, faClose } from '@fortawesome/pro-light-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { useLocation } from 'hooks/useLocation';
+
 import trackClick from 'api/farmacies/trackClick';
 
 import Button from 'components/atom/Form/Button';
@@ -11,14 +13,13 @@ import { InfoWindowContent, InfoWindowInfo, InfoWindowLinks } from './styles';
 
 const InfoWindow: React.FC<IInfoWindowProps> = ({ place, openPlaceCode, setOpenPlaceCode }) => {
   const [modalWaze, setModalWaze] = useState<boolean>(false);
+  const { useLocationConfig } = useLocation();
 
   function redirect(param: string): void {
     if (param === 'google') {
-      if (localStorage.getItem('locEnabled') === 'false') {
+      if (!useLocationConfig.isLocEnabled) {
         window.open(
-          `https://www.google.com/maps/dir/?api=1&origin=${localStorage.getItem(
-            'info'
-          )}&destination=${place.Latitude},${place.Longitude}`,
+          `https://www.google.com/maps/dir/?api=1&origin=${useLocationConfig.personalLocInfo}&destination=${place.Latitude},${place.Longitude}`,
           ' __self'
         );
       } else {
